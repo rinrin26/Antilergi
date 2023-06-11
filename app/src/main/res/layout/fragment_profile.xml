@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.ProfileFragment">
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="match_parent">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/text_profile"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="8dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="8dp"-->
+<!--            android:textAlignment="center"-->
+<!--            android:textSize="20sp"-->
+<!--            android:text="This is profile fragment"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="@dimen/normal_100"
+                android:paddingEnd="@dimen/normal_100"
+                android:paddingBottom="@dimen/normal_100">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/iv_user"
+                    android:layout_width="@dimen/image_user_profile_large"
+                    android:layout_height="@dimen/image_user_profile_large"
+                    android:layout_marginTop="100dp"
+                    android:src="@android:color/darker_gray"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv_name_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_text"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/h6"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    tools:text="Name"
+                    android:layout_marginTop="@dimen/normal_100"
+                    app:layout_constraintTop_toBottomOf="@id/iv_user"/>
+
+                <TextView
+                    android:id="@+id/tv_email_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/default_text"
+                    android:textSize="@dimen/body_1"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    tools:text="Email"
+                    app:layout_constraintTop_toBottomOf="@id/tv_name_user"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_change_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/change_password"
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="@dimen/normal_100"
+                    app:layout_constraintBottom_toTopOf="@id/btn_logout_user"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_logout_user"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:text="@string/logout"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+    </LinearLayout>
+</FrameLayout>
