@@ -25,4 +25,3 @@ implementation 'org.tensorflow:tensorflow-lite:2.10.0'
 |Test question alergy 2|![802bb02e-0637-482e-911c-194b8c5b99da](https://github.com/rinrin26/Antilergi/assets/56067805/4ca32f03-6d4e-4884-84d0-d90d5668f4ef)|
 | result 1 |![b6c7af76-792f-4153-bfa1-73b4aacdd1de](https://github.com/rinrin26/Antilergi/assets/56067805/5ec893c8-a6e5-4bec-81ad-8b8779aa5ca6)|
 | result 2| ![03ea9c6e-acdd-4f9b-8010-1d27320bf8ab](https://github.com/rinrin26/Antilergi/assets/56067805/b99f4f67-530b-468f-b9cb-5cb3fdeb38d5)|
-| | ![b6c7af76-792f-4153-bfa1-73b4aacdd1de](https://github.com/rinrin26/Antilergi/assets/56067805/5ec893c8-a6e5-4bec-81ad-8b8779aa5ca6) |
