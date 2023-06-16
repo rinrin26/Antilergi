@@ -1,9 +1,11 @@
 package com.capstone.antilergi.ui
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.capstone.antilergi.MainActivity
 import com.capstone.antilergi.R
 import com.capstone.antilergi.databinding.ActivityRegisterBinding
 
@@ -18,6 +20,8 @@ class RegisterActivity  : AppCompatActivity() {
     }
 
     private fun onAction() {
+        val moveToLogin = Intent(this, LoginActivity::class.java)
+
         registerBinding.apply {
             btnCloseRegister.setOnClickListener{
                 finish()
@@ -25,7 +29,7 @@ class RegisterActivity  : AppCompatActivity() {
 
             btnRegister.setOnClickListener {
                 Toast.makeText(it.context, "success register", Toast.LENGTH_SHORT).show()
-
+                startActivity(moveToLogin)
             }
         }
     }

@@ -4,7 +4,6 @@ import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.ProgressBar
 import android.widget.TextView
@@ -12,14 +11,20 @@ import androidx.appcompat.app.AppCompatActivity
 import com.capstone.antilergi.Constants
 import com.capstone.antilergi.databinding.ActivityTestBinding
 import com.capstone.antilergi.model.TestQuetions
+import com.capstone.antilergi.repository.TestHelperML
+import com.capstone.antilergi.repository.TextClasifierAlergiHelper
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
+import java.math.BigDecimal
 
 class TestActivity: AppCompatActivity() {
     private lateinit var testBinding: ActivityTestBinding
     lateinit var sharedPreferences: SharedPreferences
+    private lateinit var context:Context
     private lateinit var gson: Gson
-    private lateinit var answerTestList: ArrayList<Int>
+    private lateinit var textClassifier : TestHelperML
+
+    private var answerTestList: ArrayList<Float> = arrayListOf()
     private val questionsTestList: ArrayList<TestQuetions> = Constants.getTestQuetion()
     private var currentTestQuestionIndex = 0
 
@@ -27,7 +32,6 @@ class TestActivity: AppCompatActivity() {
     private var progressBar: ProgressBar? = null
     private var tvProgress: TextView? = null
     private var btnOptionAnswer: ArrayList<Button>? = null
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -40,66 +44,62 @@ class TestActivity: AppCompatActivity() {
         progressBar = testBinding.progressBarTest
         tvProgress = testBinding.tvProgress
         btnOptionAnswer = arrayListOf(testBinding.btnOption1,testBinding.btnOption2)
-        sharedPreferences = getSharedPreferences("TestQuestionPreferences", Context.MODE_PRIVATE)
-        gson = Gson()
 
-        val savedAnswerListJson = sharedPreferences.getString("answer_list", null)
 
-        // Mengkonversi string JSON menjadi ArrayList
-        answerTestList = if (savedAnswerListJson != null) {
-            gson.fromJson(savedAnswerListJson, object : TypeToken<ArrayList<Int>>() {}.type)
-        } else {
-            ArrayList()
-        }
+        val context = applicationContext
+        textClassifier = TestHelperML(context)
+        textClassifier.loadModel("alergy_model_1.tflite", "label.txt")
+
 
         btnOptionAnswer?.let {
-            for (optionIndex in it.indices) {
-                it[optionIndex].let {
-                    it.setOnClickListener{
-                        if (it == testBinding.btnOption1 ){
-                            val answerTrue = 1
-                            println("ini true nilainya ${answerTrue}")
-                            answerTestList.add(answerTrue)
-                            val answerListJson = gson.toJson(answerTestList)
+            actionBtnOption(it)
+        }
+    }
 
-                            // Menyimpan string JSON ke SharedPreferences
-                            sharedPreferences.edit().putString("answer_list", answerListJson).apply()
-                            answerTestList.clear()
+    private fun actionBtnOption(button: ArrayList<Button>){
+        for (optionIndex in button.indices) {
+            button[optionIndex].let {
+                it.setOnClickListener{
+                    if (it == testBinding.btnOption1 ){
+                        val answerTrue = 1
+                        answerTestList.add(answerTrue.toFloat())
+                    }else{
+                        val answerFalse = 0
+                        answerTestList.add(answerFalse.toFloat())
+                    }
 
-                        }else{
-
-                            val answerFalse = 0
-                            println("ini true nilainya ${answerFalse}")
-                            answerTestList.add(answerFalse)
-                            val answerListJson = gson.toJson(answerTestList)
-
-                            // Menyimpan string JSON ke SharedPreferences
-                            sharedPreferences.edit().putString("answer_list", answerListJson).apply()
-                            answerTestList.clear()
-
-                        }
-
-                        if (currentTestQuestionIndex < questionsTestList.size - 1) {
-                            currentTestQuestionIndex++
-                            updateTestQuestion()
-                        }else{
-                                val intent = Intent (this, ResultActivity::class.java)
-                                this?.startActivity(intent)
-
-                        }
+                    if (currentTestQuestionIndex < questionsTestList.size - 1) {
+                        currentTestQuestionIndex++
+                        updateTestQuestion()
+                    }else{
+                        moveToResult()
                     }
                 }
             }
         }
-
-// Menggunakan data dari SharedPreferences
-//        answerTestList.forEach { answer ->
-//            // Lakukan sesuatu dengan setiap jawaban
-//            println("Jawaban: $answer")
-//        }
-        println("Jawaban: $answerTestList")
     }
 
+
+    private fun moveToResult(){
+        val result = textClassifier.classify(answerTestList)
+
+        val predictedLabel = getMaxValue(result)
+        val intent = Intent (this, ResultActivity::class.java)
+
+        if (predictedLabel != null) {
+            val (key, value) = predictedLabel
+            println("Label Alergy: $key, Max Value Score: $value")
+            intent.putExtra(ResultActivity.extra_label_alergy, predictedLabel.key)
+        } else {
+            println("The data is empty.")
+        }
+
+        this?.startActivity(intent)
+    }
+
+    private fun getMaxValue(data: Map<String, Float>): Map.Entry<String, Float>? {
+        return data.minByOrNull { it.value }
+    }
 
     private fun updateTestQuestion() {
         tvTestQuestion?.text = questionsTestList[currentTestQuestionIndex].questionText

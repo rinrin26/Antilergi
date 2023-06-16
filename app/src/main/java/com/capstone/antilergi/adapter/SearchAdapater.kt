@@ -15,7 +15,7 @@ class SearchListAdapter(private val listArticle: ArrayList<ArticleResponse>): Re
     private lateinit var onItemClickCallback: OnItemClickCallback
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
-        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_answer, parent, false)
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.item_search, parent, false)
         return ListViewHolder(view)
     }
 
