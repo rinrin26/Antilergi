@@ -64,6 +64,4 @@ dependencies {
     implementation 'com.google.android.gms:play-services-tflite-gpu:16.1.0'
     implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0'
     implementation 'org.tensorflow:tensorflow-lite:2.10.0'
-
-//    implementation 'com.github.username:C23-PC604-Antilergi-Bangkit-2023-Mobile-App.git:1,0'
 }

@@ -32,7 +32,7 @@ class TestHelperML (private val context: Context){
         return context.assets.open(labelPath).bufferedReader().useLines { it.toList() }
     }
 
-    fun classify(inputData: ArrayList<Float>): Map<String, Float> {
+    fun classifyPredictedALergy(inputData: ArrayList<Float>): Map<String, Float> {
         require(inputData.size == inputSize) { "Jumlah elemen input tidak sesuai dengan model TFLite." }
 
         val inputArray = inputData.toFloatArray()

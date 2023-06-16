@@ -134,66 +134,6 @@ class SearchActivity: AppCompatActivity() {
         })
     }
 
-    //
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        searchBinding = ActivitySearchBinding.inflate(layoutInflater)
-//        setContentView(searchBinding.root)
-//
-//        // Inisialisasi data alergi dari string resources
-//        allergyList = createMockData()
-////            resources.getStringArray(R.array.resultTestNameAlergyList).toList()
-//
-//        // Buat adapter dan set pada RecyclerView
-//        searchListAdapter = SearchListAdapter(filteredAllergyList)
-//        searchBinding.rvListArticle.adapter = searchListAdapter
-//        searchBinding.rvListArticle.layoutManager = LinearLayoutManager(this)
-//
-//        // Set listener untuk searchView
-//        searchBinding.searchViewIdsArticle.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-//            override fun onQueryTextSubmit(query: String?): Boolean {
-//                return false
-//            }
-//
-//            override fun onQueryTextChange(newText: String?): Boolean {
-//                filterAllergies(newText)
-//                return true
-//            }
-//        })
-//
-//        filteredAllergyList.addAll(allergyList)
-//    }
-//
-//    private fun filterAllergies(query: String?) {
-//        filteredAllergyList.clear()
-//        if (query.isNullOrEmpty()) {
-//            filteredAllergyList.addAll(allergyList)
-//        } else {
-//            val filteredList = allergyList.filter { it.alergi!!.contains(query, ignoreCase = true) }
-//            filteredAllergyList.addAll(filteredList)
-//        }
-//
-//        searchListAdapter.notifyDataSetChanged()
-//    }
-//
-//    override fun onCreate(savedInstanceState: Bundle?) {
-//        super.onCreate(savedInstanceState)
-//        searchBinding = ActivitySearchBinding.inflate(layoutInflater)
-//        setContentView(searchBinding.root)
-//
-//        var listDataALergy= ArrayList<ArticleResponse>()
-//        listDataALergy = createMockData()
-//        searchBinding.rvListArticle.layoutManager = LinearLayoutManager(this)
-//        searchListAdapter = SearchListAdapter(listDataALergy)
-//        searchBinding.rvListArticle.adapter = searchListAdapter
-//
-//
-//        searchText2()
-////        getListSearchData()
-//
-//        onActionButton()
-//    }
-//
     private fun onActionButton() {
         searchBinding.apply {
             btnCloseSearch.setOnClickListener {
@@ -201,73 +141,7 @@ class SearchActivity: AppCompatActivity() {
             }
         }
     }
-//
-//    private fun searchText2(){
-////        val searchViewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
-//
-//        val searchVArticle = searchBinding.searchViewIdsArticle
-//        searchVArticle.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
-//            androidx.appcompat.widget   .SearchView.OnQueryTextListener{
-//            override fun onQueryTextSubmit(query: String?): Boolean {
-//                query?.let {search(it) }
-//                return true
-//            }
-//            override fun onQueryTextChange(newText: String?): Boolean {
-//                return false
-//            }
-//        })
-//    }
-//
-//    private fun search(keyword: String) {
-//        val dataNameAlergy = resources.getStringArray(R.array.resultTestNameAlergyList)
-//        val dataDescription = resources.getStringArray(R.array.resultTestDescriptionAlergy)
-//
-//        // Cari data alergi yang sesuai dengan keyword
-//        var listDataALergy= ArrayList<ArticleResponse>()
-//        val filteredData = listDataALergy.filter { it.alergi!!.contains(keyword, ignoreCase = true)   }
-////        for (i in filteredData.indices) {
-////            val alergy = ArticleResponse("",dataNameAlergy[i], dataDescription[i],"","","","")
-////            listDataALergy.add(alergy)
-////        }
-//
-//        filteredData as ArrayList<ArticleResponse>
-//        searchListAdapter = SearchListAdapter(filteredData)
-////        // Update data pada adapter
-////        searchBinding.rvListArticle.layoutManager = LinearLayoutManager(this)
-////        searchListAdapter = SearchListAdapter(listDataALergy)
-////        searchBinding.rvListArticle.adapter = searchListAdapter
-////
-////        searchListAdapter.setOnItemClickCallback(object: SearchListAdapter.OnItemClickCallback{
-////            override fun onItemClicked(data: ArticleResponse) {
-////                selectedItemArticleMovedToDetailArticle(data)
-////            }
-////        })
-//    }
-//
-//
-//
-//    private fun getListSearchData(keyword: String): ArrayList<ArticleResponse> {
-//
-//        val dataNameAlergy = resources.getStringArray(R.array.resultTestNameAlergyList)
-//        val dataDescription = resources.getStringArray(R.array.resultTestDescriptionAlergy)
-//        var listDataALergy= ArrayList<ArticleResponse>()
-//
-//        for (i in dataNameAlergy.indices) {
-//            val alergy = ArticleResponse("",dataNameAlergy[i], dataDescription[i],"","","","")
-//            listDataALergy.add(alergy)
-//        }
-//        searchBinding.rvListArticle.layoutManager = LinearLayoutManager(this)
-//        val adapter = SearchListAdapter(listDataALergy)
-//        searchBinding.rvListArticle.adapter = adapter
-//
-//        adapter.setOnItemClickCallback(object: SearchListAdapter.OnItemClickCallback{
-//            override fun onItemClicked(data: ArticleResponse) {
-//                selectedItemArticleMovedToDetailArticle(data)
-//            }
-//        })
-//
-//        return listDataALergy
-//    }
+
     private fun createMockData(): ArrayList<ArticleResponse> {
         // TODO: Buat mock data alergi menggunakan model Alergi
         return arrayListOf(
@@ -327,25 +201,7 @@ class SearchActivity: AppCompatActivity() {
             )
         )
     }
-//
-//    fun searchText(){
-//        val searchViewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
-//
-//        val searchVArticle = searchBinding.searchViewIdsArticle
-//        searchVArticle.setOnQueryTextListener(object : SearchView.OnQueryTextListener,
-//            androidx.appcompat.widget   .SearchView.OnQueryTextListener{
-//            override fun onQueryTextSubmit(query: String?): Boolean {
-//                query?.let { searchViewModel.searchDataArticle(it) }
-//                return true
-//            }
-//
-//            override fun onQueryTextChange(newText: String?): Boolean {
-//                return false
-//            }
-//        })
-//    }
-//
-//
+
 
     private fun selectedItemArticleMovedToDetailArticle(article: ArticleResponse){
         val goToDetailArticle = Intent(this@SearchActivity, DetailItemSearchArticleActivity::class.java)

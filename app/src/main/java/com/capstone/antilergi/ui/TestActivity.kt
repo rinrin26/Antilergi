@@ -81,7 +81,7 @@ class TestActivity: AppCompatActivity() {
 
 
     private fun moveToResult(){
-        val result = textClassifier.classify(answerTestList)
+        val result = textClassifier.classifyPredictedALergy(answerTestList)
 
         val predictedLabel = getMaxValue(result)
         val intent = Intent (this, ResultActivity::class.java)
