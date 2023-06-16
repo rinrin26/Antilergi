@@ -1,4 +1,12 @@
 # Antilergi
+The "Antilergy" application is designed to assist users in managing and understanding their allergies. This application has two main features: search and allergy testing.
+
+## Features
+
+- Search Feature: This search feature allows users to search for information related to allergies. Users can enter allergy-related keywords or terms such as allergy type, symptoms, or treatment. Subsequently, the application displays the relevant search results based on the keywords entered. Users can view articles, explanations, or resources related to the allergies that they are looking for.
+
+- Allergy Test Feature: The allergy test feature allows users to perform allergy tests independently. Users can klick the teh button to start the test. After the klicking button test, the user was directed to answer a series of questions or go through the test methods provided in the application. Based on the user's answers, the application provides results or recommendations regarding the tested allergies.
+
 ## dependencies for Tflite
 ```
 implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0'
