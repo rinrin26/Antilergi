@@ -7,6 +7,9 @@ The "Antilergy" application is designed to assist users in managing and understa
 
 - Allergy Test Feature: The allergy test feature allows users to perform allergy tests independently. Users can klick the teh button to start the test. After the klicking button test, the user was directed to answer a series of questions or go through the test methods provided in the application. Based on the user's answers, the application provides results or recommendations regarding the tested allergies.
 
+## Link Document Project: 
+- https://heylink.me/Antilergi/
+
 ## dependencies for Tflite
 ```
 implementation 'org.tensorflow:tensorflow-lite-metadata:0.1.0'
