@@ -65,8 +65,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_detail_Alergi"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:cardElevation="10dp"
         app:cardCornerRadius="20dp"
         android:layout_margin="10dp"
@@ -80,7 +80,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_content_alergi"
-            android:text="Content Alergi "
+            android:text="Alergi debu adalah salah satu jenis rinitis alergi yang paling umum. Kondisi ini terjadi karena sistem kekebalan tubuh bereaksi secara berlebihan terhadap zat-zat asing yang ada di dalam debu.
+Zat apa pun yang berpotensi menyebabkan reaksi alergi disebut alergen. Perlu diketahui, di dalam debu mungkin terdapat serangga, bulu binatang, jamur, hingga serbuk bunga."
             android:layout_gravity="center"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -93,7 +94,7 @@
         android:id="@+id/tv_tag_line_deskripsi_alergi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Alergi Debu"
+        android:text="Gejala Alergi"
         android:textSize="@dimen/h5"
         android:textColor="@color/black"
         android:fontFamily="sans-serif-medium"
@@ -105,8 +106,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_detail_deskripsi"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:cardElevation="10dp"
         app:cardCornerRadius="20dp"
         android:layout_margin="10dp"
@@ -120,7 +121,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_content_deskripsi"
-            android:text="Content deskripsi "
+            android:text=" Ciri-ciri alergi debu yang paling sering di antaranya:
+1. bersin-bersin,
+2. hidung tersumbat atau berair,
+3. mata merah, gatal, dan berair,
+4. terdapat lendir pada tenggorokan,
+5. batuk-batuk,
+6. gatal-gatal pada kulit, serta
+7. muncul ruam pada kulit.
+8. sesak napas,
+9. dada terasa berat atau nyeri,
+10. napas menjadi pendek-pendek dan berbunyi (mengi), serta
+11. susah tidur akibat sesak napas, batuk, atau bersin terus-menerus.
+"
             android:layout_gravity="center"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -133,7 +146,7 @@
         android:id="@+id/tv_tag_line_gejala_alergi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Alergi Debu"
+        android:text="Penyebab"
         android:textSize="@dimen/h5"
         android:textColor="@color/black"
         android:fontFamily="sans-serif-medium"
@@ -145,8 +158,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_detail_gejala"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:cardElevation="10dp"
         app:cardCornerRadius="20dp"
         android:layout_margin="10dp"
@@ -160,7 +173,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_content_gejala"
-            android:text="Content gejala "
+            android:text="Berikut adalah berbagai zat yang diduga memicu munculnya ciri-ciri alergi debu:
+1. Tungau Debu
+2. kecoa
+3. spora jamur
+4. Serbuk sari
+5. Bulu hewan
+"
             android:layout_gravity="center"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -171,9 +190,9 @@
 
     <TextView
         android:id="@+id/tv_tag_line_penyebab_alergi"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Alergi Debu"
+        android:text="cara menangani"
         android:textSize="@dimen/h5"
         android:textColor="@color/black"
         android:fontFamily="sans-serif-medium"
@@ -185,8 +204,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_detail_penyebab"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:cardElevation="10dp"
         app:cardCornerRadius="20dp"
         android:layout_margin="10dp"
@@ -200,7 +219,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_content_penyebab"
-            android:text="Content gejala "
+            android:text="Cara terbaik untuk menghindari kambuhnya alergi debu adalah dengan menghindari paparan debu. Namun, rasanya sulit untuk menghindari debu karena keberadaannya ada di mana-mana, bahkan di dalam rumah sendiri. dokter biasanya akan meresepkan beberapa obat kepada pasien alergi debu untuk membantu meringankan gejalanya, seperti:
+1. Pemberian obat-obatan. Beberapa obat yang dapat meredakan gejala alergi debu adalah antihistamin, kortikosteroid, dan dekongestan.
+2. Imunoterapi. Perawatan ini bertujuan untuk membuat tubuh lebih kebal terhadap debu penyebab alergi. Imunoterapi biasanya menjadi pilihan pengobatan kedua ketika pemberian obat-obatan lain tidak efektif.
+3. Suntik epinefrin. Suntikan ini biasanya diberikan kepada orang yang memiliki riwayat alergi parah dan berisiko mengalami anafilaksis. "
             android:layout_gravity="center"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -214,7 +236,7 @@
         android:id="@+id/tv_tag_line_solusi_alergi"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Alergi Debu"
+        android:text="Cara Mencegah"
         android:textSize="@dimen/h5"
         android:textColor="@color/black"
         android:fontFamily="sans-serif-medium"
@@ -226,8 +248,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/card_detail_solusi"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         app:cardElevation="10dp"
         app:cardCornerRadius="20dp"
         android:layout_margin="10dp"
@@ -241,7 +263,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/text_content_solusi"
-            android:text="Content gejala "
+            android:text="Tidak ada cara menghilangkan alergi debu secara khusus, kondisi ini hanya dapat dicegah dengan menerapkan perubahan gaya hidup, seperti:
+1. Rutin mencuci peralatan tidur dan perabot kain lainnya, setidaknya seminggu sekali menggunakan air panas.
+2. Rutin membersihkan dan mengganti gorden, karpet, dan perabot rumah tangga lainnya.
+3. Membersihkan perabot keras seperti meja, kursi, dan dekorasi rumah, seperti vas bunga atau rak lemari, dengan lap basah untuk mencegah debu beterbangan di udara.
+4. Menggunakan air purifier HEPA (high-efficiency particulate air filter) untuk menyaring partikel-partikel asing di udara yang dapat menyebabkan alergi.
+5. Menghindari penggunaan karpet berbulu atau permadani di rumah.
+6. Menjauhkan hewan peliharaan dari kamar dan memisahkan kandang hewan di luar rumah.
+7. Menjaga kelembapan ruangan dengan memasang humidifier."
             android:layout_gravity="center"
             android:textSize="20sp"
             android:textStyle="bold"

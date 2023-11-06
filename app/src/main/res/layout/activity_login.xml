@@ -101,16 +101,39 @@
             android:layout_marginTop="@dimen/normal_100"/>
 
         <Button
-            android:id="@+id/btn_register"
+            android:id="@+id/btn_login_google"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/register"
+            android:text="Login With Google"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:layout_marginTop="@dimen/normal_100"
+            android:layout_marginStart="@dimen/small_50"
+            android:layout_marginEnd="@dimen/small_50"
+            android:background="@drawable/bg_button_color_yellow"/>
+
+        <Button
+            android:id="@+id/btn_login_facebook"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login With Facebook"
             android:textColor="@color/white"
             android:textSize="18dp"
             android:layout_marginTop="@dimen/normal_100"
             android:layout_marginStart="@dimen/small_50"
             android:layout_marginEnd="@dimen/small_50"
-            android:background="@drawable/bg_button_color_primary"/>
+            android:background="@drawable/bg_button_color_facebook"/>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="Tidak Punya Akun? Daftar Disini !!"
+            android:textAllCaps="false"
+            android:textStyle="italic"
+            android:layout_gravity="end"
+            android:background="@android:color/transparent"
+            android:layout_marginTop="@dimen/normal_100"/>
 
     </LinearLayout>
 

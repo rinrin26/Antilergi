@@ -12,6 +12,12 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/navigation_riwayat"
+        android:label="Home"
+        android:name="com.capstone.antilergi.ui.RiwayatFragment"
+        tools:layout="@layout/fragment_riwayat" />
+
+    <fragment
         android:id="@+id/navigation_profile"
         android:label="Profile"
         android:name="com.capstone.antilergi.ui.ProfileFragment"

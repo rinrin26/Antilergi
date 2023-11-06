@@ -140,9 +140,36 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/register"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
+                android:textStyle="bold"
                 android:background="@drawable/bg_button_color_primary"
                 android:layout_marginTop="@dimen/normal_175"/>
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/or"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:layout_gravity="center_horizontal"-->
+<!--                android:layout_marginTop="@dimen/normal_100"/>-->
+
+<!--            <Button-->
+<!--                android:id="@+id/btn_register_google"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Register with google"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:background="@drawable/bg_button_color_yellow"-->
+<!--                android:layout_marginTop="@dimen/normal_175"/>-->
+<!--            <Button-->
+<!--                android:id="@+id/btn_register_fb"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Register with facebook"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:background="@drawable/bg_button_color_facebook"-->
+<!--                android:layout_marginTop="@dimen/normal_175"/>normal_175-->
 
         </LinearLayout>
 

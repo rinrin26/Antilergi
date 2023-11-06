@@ -5,7 +5,9 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import androidx.appcompat.app.AppCompatActivity
+import com.capstone.antilergi.MainActivity
 import com.capstone.antilergi.R
+import com.google.firebase.auth.FirebaseAuth
 
 class SplashActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,11 +17,22 @@ class SplashActivity : AppCompatActivity() {
         delayGoToLogin()
     }
 
- fun delayGoToLogin(){
+    private fun checkAuth() {
+        if (FirebaseAuth.getInstance().currentUser !=null){
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
+        }else{
+            startActivity(Intent(this, LoginActivity::class.java))
+            finish()
+        }
+    }
+
+    fun delayGoToLogin(){
      Handler().postDelayed({
-         val moveToHome = Intent(this,LoginActivity::class.java)
-         startActivity(moveToHome)
-         finish()
+//         val moveToHome = Intent(this,LoginActivity::class.java)
+//         startActivity(moveToHome)
+//         finish()
+         checkAuth()
      }, 1000)
  }
 }

@@ -6,15 +6,12 @@ import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
-import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.capstone.antilergi.R
-import com.capstone.antilergi.adapter.SearchAdapter2
 import com.capstone.antilergi.adapter.SearchListAdapter
 import com.capstone.antilergi.databinding.ActivitySearchBinding
 import com.capstone.antilergi.model.ArticleResponse
-import com.capstone.antilergi.model.SearchViewModel
+import com.capstone.antilergi.model.RiwayatTest
 
 class SearchActivity: AppCompatActivity() {
     private lateinit var searchBinding: ActivitySearchBinding
