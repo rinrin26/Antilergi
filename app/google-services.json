@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1055009030300",
+    "project_id": "antilergi",
+    "storage_bucket": "antilergi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1055009030300:android:61dd2ab74ef9be1aafed59",
+        "android_client_info": {
+          "package_name": "com.capstone.antilergi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1055009030300-u3pbc3r2bcngehqst5in5av68dmophts.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDtzwLveDtqvI3oykEX86h5GUYGuIT2jpM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1055009030300-u3pbc3r2bcngehqst5in5av68dmophts.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
