@@ -28,7 +28,7 @@ implementation 'org.tensorflow:tensorflow-lite:2.10.0'
 | Section     | Screenshoot |
 |------------ |-------------|
 | Login |![WhatsApp Image 2023-06-16 at 21 59 17](https://github.com/rinrin26/Antilergi/assets/56067805/f2277e78-eab5-4251-b778-04720efb1e58)|
-|Register|![9125a701-615f-4b7c-91cc-1554da2d3210](https://github.com/rinrin26/Antilergi/assets/56067805/a851ba16-e735-4594-b36c-547e923937dd)|
+|Register|![9125a701-615f-4b7c-91cc-1554da2d3210](https://github.com/rinrin26/Antilergi/blob/5e87b673e50ee2f492cafb45c008ca7c99f41075/Screanshot/9125a701-615f-4b7c-91cc-1554da2d3210.jpg)|
 |SplashScreen | ![7a0f8d38-0ccc-4e19-8af2-0a8350626da3](https://github.com/rinrin26/Antilergi/assets/56067805/8460cd8f-ee3f-4f1a-96e0-8cead1028597)|
 | Home |![6fb93258-e2ab-4f30-983a-9aa762513086](https://github.com/rinrin26/Antilergi/assets/56067805/d2d82cd6-7276-4202-808b-c23f08ccf366)|
 |onboarding test|![156e4b9c-270d-45dd-a234-da5dca7a1941](https://github.com/rinrin26/Antilergi/assets/56067805/e694ecf3-71ac-4fa6-b2de-0ef7297ca184)|
